@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About | The Artist</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,500;1,300&family=Montserrat:wght@300;400&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --matcha-bg: #e8f0e6;      /* Light pastel green */
+            --sage-accent: #89a88d;    /* Muted sage */
+            --deep-green: #3d4f40;     /* Dark text green */
+            --white: #fdfdfb;
+        }
+
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: var(--matcha-bg);
+            color: var(--deep-green);
+            line-height: 1.6;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* --- Header --- */
+        header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            padding: 40px 60px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 100;
+        }
+
+        .home-link {
+            text-decoration: none;
+            color: var(--deep-green);
+            font-size: 0.75rem;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            font-weight: 400;
+            border-bottom: 1px solid var(--sage-accent);
+            padding-bottom: 5px;
+            transition: 0.3s;
+        }
+
+        .home-link:hover {
+            opacity: 0.6;
+            letter-spacing: 5px;
+        }
+
+        /* --- About Section --- */
+        main {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 120px 20px 60px 20px;
+        }
+
+        .about-card {
+            background: var(--white);
+            max-width: 1000px;
+            width: 100%;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            border-radius: 30px;
+            overflow: hidden;
+            box-shadow: 0 30px 60px rgba(61, 79, 64, 0.05);
+        }
+
+        /* Image Side */
+        .photographer-image {
+            width: 100%;
+            height: 100%;
+            background-color: var(--sage-accent);
+        }
+
+        .photographer-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+            filter: sepia(10%) contrast(95%);
+        }
+
+        /* Text Side */
+        .bio-content {
+            padding: 60px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .label {
+            font-family: 'Cormorant Garamond', serif;
+            font-style: italic;
+            font-size: 1.2rem;
+            color: var(--sage-accent);
+            margin-bottom: 10px;
+        }
+
+        h1 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 3rem;
+            font-weight: 500;
+            line-height: 1;
+            margin-bottom: 25px;
+        }
+
+        p {
+            font-size: 0.9rem;
+            margin-bottom: 20px;
+            color: #555;
+            font-weight: 300;
+            max-width: 400px;
+        }
+
+        .contact-cta {
+            margin-top: 20px;
+            display: inline-block;
+            text-decoration: none;
+            color: var(--white);
+            background: var(--deep-green);
+            padding: 15px 35px;
+            border-radius: 50px;
+            font-size: 0.75rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            width: fit-content;
+            transition: 0.3s ease;
+        }
+
+        .contact-cta:hover {
+            background: var(--sage-accent);
+            transform: translateY(-2px);
+        }
+
+        /* --- Responsive --- */
+        @media (max-width: 850px) {
+            .about-card {
+                grid-template-columns: 1fr;
+                max-width: 500px;
+            }
+            .photographer-image { height: 400px; }
+            .bio-content { padding: 40px; text-align: center; align-items: center; }
+            header { padding: 30px; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <a href="index2.html" class="home-link">Home</a>
+        <div style="font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 1.2rem;">The Artist</div>
+    </header>
+
+    <main>
+        <div class="about-card">
+            <div class="photographer-image">
+                <img src="me.png" alt="Photographer Portrait">
+            </div>
+
+            <div class="bio-content">
+                <span class="label">Digital Media</span>
+                <h1>Megan An</h1>
+                <p>
+                    I am a student in Garden Grove Highschool taking Digital Media. This website showcases my photogrpahy and grpahic designs completed for the class.
+                </p>
+                <p>
+                    I'm a beginner so most of my designs and photos are experimental with the intent of learning and becoming better!
+                </p>
+                
+                <a href="mailto:mechiicora@gmail.com" class="contact-cta">Get in Touch</a>
+            </div>
+        </div>
+    </main>
+
+</body>
+</html>
